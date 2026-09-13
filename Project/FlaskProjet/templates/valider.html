@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+            body {
+    margin: 0;
+    padding: 0%;
+    background-color: #FCD7FF;
+  }
+
+form {
+    width: 400px;
+    margin: auto;
+}
+
+form input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+}
+
+.valider {
+    max-width: 400px;
+    width: 60%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bouton{
+    max-width: 400px;
+    width: 40%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+form {
+    width: 400px;
+    margin: auto;
+    box-shadow: 0 0 10px #FCD7FF;
+}
+
+form input:focus {
+    background-color: #FCD7FF;
+    outline: none; 
+    border: 2px solid #CA158D; 
+}
+
+
+
+@font-face {
+    font-family: 'retro_gaming';
+    src: url('police/retro_gaming-webfont.woff2') format('woff2'),
+         url('police/retro_gaming-webfont.woff') format('woff');
+
+}
+
+form input {
+    font-family: "retro_gaming"; 
+}
+
+.nom_utilisateur {
+    max-width: 400px;
+    width: 40%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.mot_de_passe {
+    max-width: 400px;
+    width: 40%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+}
+.bouton:hover{
+  filter: brightness(130%)
+
+}
+
+
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="valider" content="width=device-width, initial-scale=1.0">
+  <title> valider </title>
+</head>
+
+<body>
+    <form method="POST">
+        <div class="nom_utilisateur">
+            <input type="name"name="nom_utilisateur" placeholder="Entrez votre nom d'utilisateur">
+            <span class="border"></span>
+        </div>
+        
+        <div class="mot_de_passe">
+            <input type="password" name= "password" placeholder="Entrez votre mot de passe">
+            <span class="border"></span>
+        </div>        
+        <img class="valider"src="{{url_for('static', filename='valider.png')}}">
+        <button type="submit" name ="submit">
+            <img class="bouton" src="{{url_for('static', filename='bouton.png')}}" width: 818px;
+            height: 199px; bottom: 0 style="cursor:pointer;">
+        </input>
+    </form>
+
+  
+</body>
+</html>

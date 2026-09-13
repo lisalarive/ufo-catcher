@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+      body {
+  width: 80%;
+  height: 1024px;
+  background: #2D0852;
+  align-items: center;
+  overflow: hidden;
+}
+
+.titre {  
+  height: 100px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.peluche { 
+  height: 500px;
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.titre:hover{
+  filter: brightness(130%)
+
+}
+
+
+
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="page couverture" content="width=device-width, initial-scale=1.0">
+  <title>page couverture </title>
+</head>
+
+<body>
+  <form action="/connexion", method="POST">
+    <button type="submit" >
+      <img class="titre" src="{{url_for('static', filename='UFO_catcher_titre.png')}}" alt="UFO">
+  </button>
+
+  </form>
+
+  
+  <img class="peluche"src="{{url_for('static', filename='peluche_image.png')}}" width: 1436px;
+  height: 556px> 
+  
+
+    
+</body>
+</html>

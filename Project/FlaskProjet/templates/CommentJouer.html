@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+    
+      * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        appearance: none;
+
+      }
+      
+      .head-band {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+      }
+      body{
+        zoom: 132.15%;
+        background-color: #2D0852;
+      }
+
+      .http-ufocatcher-inventaire,
+        .http-ufocatcher-inventaire * {
+            box-sizing: border-box;
+        }
+        
+        .galerie-de-peluches {
+          background: #fcd7ff;
+          border-radius: 40px 40px 0px 0px;
+          width: 1340px;
+          height: 129px;
+          position: absolute;
+          left: 50px;
+          top: 279px;
+        }
+        .frame-10 {
+          background: #ae89bd;
+          border-radius: 0px 0px 40px 40px;
+          width: 1340px;
+          height: 899px;
+          position: absolute;
+          left: 50px;
+          top: 408px;
+        }
+
+        .text1{
+            position: relative;
+            top: 500px;
+            left: 75px;
+        }
+        .text2{
+            position: relative;
+            top: 800px;
+            left: -535px
+        }
+        .joystick{
+            position: relative;
+            left: 750px;
+        }
+        .bouton_game{
+            position: relative;
+            left: 250px;
+            top: 300px;
+        }
+        .rectangle-1 {
+          background: #fcd7ff;
+          width: 1440px;
+          height: 150px;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+        }
+        .logo {
+          width: 39%;
+          position: absolute;
+          left: 449px;
+          top: 25px;
+        }
+        .compte {
+          width: 118px;
+          height: 118px;
+          position: absolute;
+          left: 1300px;
+          top: 10px;
+        }
+        .compte:hover {
+          filter : brightness(180%);
+        }
+        .galerie:hover {
+            filter: brightness(130%)
+        }
+        
+        
+        .return {
+          width: 100px;
+          position: absolute;
+          left: 56px;
+          top: 20px;
+        }
+        .return:hover {
+          filter : brightness(180%);
+        }
+        .galerie { /**a changer en fonction de la page**/
+          width: 325px;
+          height: 140px;
+          position: absolute;
+          left: 78px;
+          top: 295px;
+        }
+        
+
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="http-ufocatcher-inventaire">
+      <div class="galerie-de-peluches"></div>
+      <div class="frame-10">
+       
+      </div>
+      <div class="frame-9"></div>
+      <div class="head-band">
+        <div class="rectangle-1"></div>
+        <img class="logo" src="{{url_for('static', filename='UFOcatcher_title.png')}}" /><!--Fixe-->
+        <form action="/accueil", method="POST">
+          <button type="submit">
+            <img class="return" src="{{url_for('static', filename='retour.png')}}"/>
+          </button>
+        </form>
+        <form action="/profil", method="POST">
+          <button type="submit">
+            <img class="compte" src="{{url_for('static', filename='Compte.png')}}"/><!--Fixe-->
+          </button>
+        </form>
+      </div>
+        <img class="text1" src="{{url_for('static', filename='textjouer1.png')}}">
+        <img class="text2" src="{{url_for('static', filename='textjouer2.png')}}">
+        <img class="galerie" src="{{url_for('static', filename='commentjouer.png')}}" /><!--Changant-->
+        <img class="joystick" src="{{url_for('static', filename='joystick.png')}}">
+        <img class="bouton_game" src="{{url_for('static', filename='button.png')}}">
+  </body>
+</html>

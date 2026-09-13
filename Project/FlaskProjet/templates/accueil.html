@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UfoCatcher</title>
+    <style>
+        @font-face {
+            font-family: 'retro_gaming';
+            src: url('police/retro_gaming-webfont.woff2') format('woff2'),
+            url('police/retro_gaming-webfont.woff') format('woff');
+
+        }
+        body {
+            background-color: #2D0852;
+            zoom: 140%;
+            overflow: hidden;
+            font-family: "retro_gaming"; 
+
+        }
+
+        .rectangle-1 {
+          background: #fcd7ff;
+          width: 1440px;
+          height: 140px;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+        }
+        .pseudo{
+            position: relative;
+            top: 500px;
+            color: white;
+        }
+
+        .title {
+            width: 100%;
+            max-width: 524px;
+            position: absolute;
+            padding: 24px;
+            left: 28%;
+        }
+        .profil{
+            left: 1220px;
+            padding: 10px;
+            position: absolute;
+            width: 110px;
+            height: 110px;
+
+
+
+            
+        }
+
+        .image {
+            width: 100%;
+            max-width: 639px;
+            position: absolute;
+            border-radius: 18px;
+            max-height: 80%;
+            left: 26.5%;
+            top: 120px;
+        }
+
+        .button-container {
+            position: absolute;
+            display: flex;
+        }
+
+        .button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+        }
+
+        .right-buttons {
+            position: absolute;
+            top: 20vh;
+            right: -1330px; /* Utilisez 'right: 0;' pour aligner le conteneur à droite */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left-buttons {
+            position: absolute;
+            top: 20vh;
+            right: -350px;
+            display: flex;
+            flex-direction: column;
+           
+        }
+        .anim{
+            position: relative;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+        }
+        .anim:hover{
+
+            filter: brightness(180%);
+        }
+        .button:hover {
+            filter: brightness(130%)
+        }
+
+        .button1 {
+            max-width: 500px;
+        }
+
+        .button2 {
+            max-width: 500px;
+
+        }
+
+        .button3 {
+            max-width: 500px;
+        }
+
+        .button4 {
+            max-width: 500px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="rectangle-1">
+            </div>
+        </div>
+        <div class="rectangle-1">
+            <form action="/profil", method="POST">
+                <button class="button" type="submit">
+                    <div class="anim">
+                        <img class="profil" src="{{url_for('static', filename='Compte.png')}}" alt="Profil">
+                    </div>
+                </button>
+            </form>
+            <img class="title" src="{{url_for('static', filename='UFOcatcher_title.png')}}" alt="UFO Catcher Title">
+        </div>
+        <div class="ufo-image">
+            <img class="image" src="{{url_for('static', filename='image.png')}}" alt="UFO Image">
+        </div>
+
+        <div class="button-container">
+            <div class="left-buttons">
+                <!--Comment jouer-->
+                <form action="/commentjouer", method="POST">
+                    <button class="button">
+                        <img class="button1" src="{{url_for('static', filename='commentjouer.png')}}" alt="Comment Jouer">
+                    </button>
+                </form>
+                <!--regle-->
+                <form action="/regle", method="POST">
+                    <button class="button">
+                        <img class="button2" src="{{url_for('static', filename='regle_bouton.png')}}" alt="Règle">
+                    </button>
+                </form>
+
+            </div>
+            <div class="right-buttons">
+                <!--Galerie des Peluches-->
+                <form action="/galerie", method="POST">
+                <button class="button">
+                    <img class="button3" src="{{url_for('static', filename='galerie_des_peluches_bouton.png')}}" alt="Galerie des Peluches">
+                </button>
+                </form>
+                <!--Leaderboard-->
+                <form action="/leaderboard", method="POST">
+                    <button class="button">
+                        <img class="button4"src="{{url_for('static', filename='leaderboard_bouton.png')}}" alt="Leaderboard">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
